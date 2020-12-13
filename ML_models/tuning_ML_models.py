@@ -1,8 +1,14 @@
-
 import numpy as np
 import pandas as pd
 
 class LR():
+    """ 
+    This class encapsulate an LR classifier, the sameples X 
+    and the target values y.
+
+    It implements Sklearn Library Logistic Regression model 
+    and it can fit the model with given training data.
+    """
     def __init__(self, X, y):
         # super(LR, self).__init__(random_state=0, max_iter = 1000)
         from sklearn.linear_model import LogisticRegression
@@ -29,6 +35,13 @@ class LR():
         return grid_search.cv_results_['mean_test_f1_macro']
 
 class SVM():
+    """ 
+    This class encapsulate an SVC (Support Vector Classification) classifier, 
+    the sameples X and the target values y.
+    
+    It implements Sklearn Library SVC model 
+    and it can fit the model with given training data.
+    """
     def __init__(self, X, y):
         # super(LR, self).__init__(random_state=0, max_iter = 1000)
         from sklearn.svm import SVC
@@ -56,6 +69,13 @@ class SVM():
         return grid_search.cv_results_['mean_test_f1_macro']
 
 class MNB():
+    """ 
+    This class encapsulate an MNB classifier, the sameples X 
+    and the target values y.
+
+    It implements Sklearn Library multinomial Naive Bayes model 
+    and it can fit the model with given training data.
+    """
     def __init__(self, X, y):
         # super(LR, self).__init__(random_state=0, max_iter = 1000)
         from sklearn.naive_bayes import MultinomialNB
@@ -83,6 +103,13 @@ class MNB():
         return grid_search.cv_results_['mean_test_f1_macro']
 
 class RF():
+    """ 
+    This class encapsulate an RF classifier, the sameples X 
+    and the target values y.
+
+    It implements Sklearn Library Random Forest model 
+    and it can fit the model with given training data.
+    """
     def __init__(self, X, y):
         from sklearn.ensemble import RandomForestClassifier
         from sklearn.preprocessing import MinMaxScaler
@@ -109,6 +136,13 @@ class RF():
         return grid_search.cv_results_['mean_test_f1_macro']
 
 class NN():
+    """ 
+    This class encapsulate an k-NN classifier, the sameples X 
+    and the target values y.
+
+    It implements Sklearn Library k nearest neighbors model 
+    and it can fit the model with given training data.
+    """
     def __init__(self, X, y):
         from sklearn.neighbors import KNeighborsClassifier
         self.clf = KNeighborsClassifier()
@@ -134,6 +168,15 @@ class NN():
         return grid_search.cv_results_['mean_test_f1_macro']
 
 def tuning_Perceptron_tol(X, y):
+    """ 
+    This function works for tuning perceptron learning model on stopping criteria
+        using sklearn library.
+        Params:
+            @X: a sameple dataframes of sequences embeddings
+            @y: a list of multiclassed label
+        Return:
+            void  
+    """
     from sklearn.multiclass import OneVsRestClassifier
     from sklearn.model_selection import GridSearchCV
     from sklearn.linear_model import Perceptron
@@ -159,6 +202,16 @@ def tuning_Perceptron_tol(X, y):
     return grid_search.cv_results_['mean_test_f1_macro']  
 
 def tuning_Perceptron_alpha(X, y):
+    """ 
+    This function works for tuning perceptron learning model on alpha
+        using sklearn library.
+        :alpha the constant regularization
+        Params:
+            @X: a sameple dataframes of sequences embeddings
+            @y: a list of multiclassed label
+        Return:
+            void  
+    """
     from sklearn.multiclass import OneVsRestClassifier
     from sklearn.model_selection import GridSearchCV
     from sklearn.linear_model import Perceptron

@@ -1,3 +1,4 @@
+import multiprocessing
 import gensim
 import gensim.utils
 from gensim.parsing.preprocessing import STOPWORDS
