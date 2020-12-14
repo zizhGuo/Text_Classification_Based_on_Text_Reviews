@@ -10,8 +10,8 @@ This study mainly focuses on Categorization in text mining topic, also as known 
 |Directory|File|About|
 |--|--|--|
 |**dataset**|[README.md](./dataset/README.md)|Introduing the dataset used in the study|
-||IS_new.csv|Lematized dataset (currently not yet upload)|
-||IS.csv|Stemed dataset (currently not yet upload)|
+||IS_new.csv|Lemmatized dataset|
+||IS.csv|Stemmed dataset|
 |**experiment**|[README.md](./experiment/README.md)|Giving the part of exact experiment details (more in README in ML_models and NN_models)|
 ||[run_ML.py](./experiment/run_ML.py), [run_RNN.py](./experiment/run_RNN.py)||
 |**images**||Containing all README images|
