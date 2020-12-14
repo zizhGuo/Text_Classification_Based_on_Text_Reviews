@@ -1,6 +1,8 @@
-**Content Table:**
-[TOC]
+### Dataset
 ---
+The dataset that we used was downloaded from Yelp. The original dataset has been firstly used for Yelp Dataset Challenge and is kept updating throughout the years. It contains information about reviews, business, users, and business check-ins. The main two datasets we use is business and reviews. We specially focus on **6000** businesses evenly divided in **3 categories** with their whole reviews concatenating together that the documents being features. The vocabulary size is around 180,000 which makes our documents source complex and rich in information enough to represent each business. The type of business we select is the restaurant specifically are marked in Sushi Bars, American New, and Fast Food. We believe it is firstly rich in information of the reviews due the Yelp Dataset are mainly focus on Restaurant service collection, and these three categories are not exactly similar whether in the business model or food service it provides.
+
+For each document, we only use 6000 characters (white space inclusive) for training due to the memory limitation while conduct deep learning training hence maintains the same dataset to use for the fair models’ comparison. We conduct 10-fold cross-validation, and we assume each review for each restaurant extracted from JSON dataset file is randomly ordered, but we have ranked the restaurant based on the number of reviews they have so that when conduct concatenation, it guarantees the most reviewed restaurants to be selected as the source restaurants.
 
 ### Python Files
 This directory contains the actual dataset used for the experiments.

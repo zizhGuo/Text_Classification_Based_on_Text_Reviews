@@ -1,6 +1,4 @@
-
-**Content Table:**
-[TOC]
+### Textual Features
 ---
 
 

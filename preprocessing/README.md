@@ -1,5 +1,4 @@
-**Content Table:**
-[toc]
+### Preprocessing
 ---
 ### Python Files
 - **stem_lemmatize.py**: This files contains the python code for tokenizing the review texts.

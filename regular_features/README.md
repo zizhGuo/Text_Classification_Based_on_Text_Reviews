@@ -1,5 +1,4 @@
-**Table of Contents**
-[toc]
+Regular Features
 ---
 
 ### Python Files

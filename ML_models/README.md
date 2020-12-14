@@ -1,5 +1,4 @@
-**Content Table:**
-[TOC]
+### ML Models
 ---
 ### Python Files
 - **tuning_ML_models.py**: This files contains the python code to tune the ML models.
